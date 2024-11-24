@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "easymde/dist/easymde.min.css";
 
 const workSans = localFont({
   src: [
@@ -54,7 +55,7 @@ const workSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Startopia",
+  title: "YC Directory",
   description: "Pitch, Vote and Grow",
 };
 
@@ -65,7 +66,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={workSans.variable}>{children}</body>
+      <body className={workSans.variable}>
+        {children}
+      </body>
     </html>
   );
 }
